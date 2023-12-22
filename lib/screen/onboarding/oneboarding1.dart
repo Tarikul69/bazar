@@ -1,3 +1,4 @@
+import 'package:bazar/screen/sign%20in%20&%20sign%20up/signin.dart';
 import 'package:flutter/material.dart';
 
 class oneboarding1 extends StatelessWidget {
@@ -10,7 +11,9 @@ class oneboarding1 extends StatelessWidget {
         child: Column(
           children: [
             TextButton(
-              onPressed: () {},
+              onPressed: () {
+                signin();
+              },
               child: Text(
                 "Skip",
                 style: TextStyle(
@@ -18,6 +21,11 @@ class oneboarding1 extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
+            ),
+            BackButton(
+              onPressed: () {
+                signin();
+              },
             )
           ],
         ),
