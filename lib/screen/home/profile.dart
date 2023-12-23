@@ -1,0 +1,16 @@
+import 'package:flutter/material.dart';
+
+class profile extends StatelessWidget {
+  const profile({Key? key}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        elevation: 1,
+        title: Text("profile"),
+      ),
+      body: Container(),
+    );
+  }
+}

@@ -1,3 +1,4 @@
+import 'package:bazar/screen/home/homepage.dart';
 import 'package:bazar/screen/onboarding/oneboarding1.dart';
 import 'package:bazar/screen/profile/profile.dart';
 import 'package:bazar/screen/sign%20in%20&%20sign%20up/signin.dart';
@@ -24,7 +25,7 @@ class _splashscreenState extends State<splashscreen> {
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(
-        builder: (context) => profile(),
+        builder: (context) => homepage(),
       ),
     );
   }
