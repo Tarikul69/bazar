@@ -10,6 +10,12 @@ class signin extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
+        leading: BackButton(
+          style: ButtonStyle(),
+          onPressed: () {
+            Get.to(profile());
+          },
+        ),
         actions: [
           IconButton(
             onPressed: () {
@@ -25,12 +31,7 @@ class signin extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            BackButton(
-              style: ButtonStyle(),
-              onPressed: () {
-                Get.to(profile());
-              },
-            ),
+             
             ListTile(
               title: Text("Welcome Back"),
               subtitle: Text("Sign to your account"),
