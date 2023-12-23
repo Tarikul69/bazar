@@ -8,7 +8,7 @@ class category extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         elevation: 1,
-        title: Text("category"),
+        title: Text("Category"),
       ),
       body: Container(),
     );

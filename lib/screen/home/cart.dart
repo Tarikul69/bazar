@@ -8,7 +8,7 @@ class cart extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         elevation: 1,
-        title: Text("cart"),
+        title: Text("Cart"),
       ),
       body: Container(),
     );
