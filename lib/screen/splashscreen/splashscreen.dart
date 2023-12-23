@@ -1,4 +1,5 @@
 import 'package:bazar/screen/onboarding/oneboarding1.dart';
+import 'package:bazar/screen/profile/profile.dart';
 import 'package:bazar/screen/sign%20in%20&%20sign%20up/signin.dart';
 import 'package:flutter/material.dart';
 
@@ -23,7 +24,7 @@ class _splashscreenState extends State<splashscreen> {
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(
-        builder: (context) => signin(),
+        builder: (context) => profile(),
       ),
     );
   }
