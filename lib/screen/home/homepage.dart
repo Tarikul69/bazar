@@ -24,6 +24,11 @@ class homepage extends StatelessWidget {
           height: 70,
           width: MediaQuery.of(context).size.width,
           child: TabBar(
+            indicatorWeight: .1,
+            labelStyle: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+            unselectedLabelStyle:
+                TextStyle(fontSize: 14, fontWeight: FontWeight.normal),
+            unselectedLabelColor: Colors.black,
             tabs: [
               Tab(
                 text: "Home",
