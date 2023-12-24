@@ -1,3 +1,4 @@
+import 'package:bazar/screen/widget/mycard.dart';
 import 'package:bazar/screen/widget/top-of-week-card.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -58,19 +59,24 @@ class _homeState extends State<home> {
           child: Column(
             children: [
               SizedBox(
-                height: 190,
+                height: 290,
                 width: MediaQuery.of(context).size.width,
                 child: Card(
                   color: const Color.fromARGB(255, 224, 222, 222),
                 ),
               ),
               SizedBox(
-                height: 250,
+                height: 15,
+              ),
+              SizedBox(
+                height: 200,
                 width: MediaQuery.of(context).size.width,
                 child: Card(
-                  elevation: 0,
+                  elevation: 1,
                   child: Column(
                     children: [
+                      //#################################################################
+                      //Top of Week Portion
                       Padding(
                         padding: const EdgeInsets.all(10.0),
                         child: Row(
@@ -97,13 +103,106 @@ class _homeState extends State<home> {
                           ],
                         ),
                       ),
-                      //for (int i = 0; i == 6; i++)
-                      const top_of_week_card(),
+                      SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: Row(
+                          children: [
+                            abcd(),
+                            abcd(),
+                            abcd(),
+                            abcd(),
+                            abcd(),
+                            abcd(),
+                            abcd(),
+                          ],
+                        ),
+                      ),
+                      //#########################################################
+                      //Best Vendor
+
+                      //#########################################################
+                      //Author
                     ],
                   ),
                 ),
-              )
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              //#################################################################
+              //Best Vendor
+              SizedBox(
+                height: 200,
+                width: MediaQuery.of(context).size.width,
+                child: Card(
+                  elevation: 1,
+                  child: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Row(
+                          children: [
+                            Title(
+                              color: Colors.black,
+                              child: Text(
+                                "Best Vendor",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 20,
+                                ),
+                              ),
+                            ),
+                            TextButton(
+                              onPressed: () {},
+                              child: Text(
+                                "See all",
+                                style: TextStyle(
+                                  fontSize: 20,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: Row(
+                          children: [
+                            abcd(),
+                            abcd(),
+                            abcd(),
+                            abcd(),
+                            abcd(),
+                            abcd(),
+                            abcd(),
+                          ],
+                        ),
+                      ),
+                      //#########################################################
+                      //Best Vendor
+
+                      //#########################################################
+                      //Author
+                    ],
+                  ),
+                ),
+              ),
             ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget abcd() {
+    return SizedBox(
+      height: 140,
+      width: 180,
+      child: Card(
+        child: FittedBox(
+          fit: BoxFit.contain,
+          child: Image.network(
+            'https://storage.googleapis.com/cms-storage-bucket/70760bf1e88b184bb1bc.png',
           ),
         ),
       ),
