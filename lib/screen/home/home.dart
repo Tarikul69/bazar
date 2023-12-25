@@ -1,7 +1,8 @@
-import 'package:bazar/screen/widget/mycard.dart';
-import 'package:bazar/screen/widget/top-of-week-card.dart';
+import 'package:bazar/screen/home/component/authors.dart';
+import 'package:bazar/screen/home/component/vendor.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:get/get.dart';
 
 class home extends StatefulWidget {
   const home({Key? key}) : super(key: key);
@@ -148,7 +149,9 @@ class _homeState extends State<home> {
                               ),
                             ),
                             TextButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Get.to(const vendor());
+                              },
                               child: Text(
                                 "See all",
                                 style: TextStyle(
@@ -201,7 +204,9 @@ class _homeState extends State<home> {
                               ),
                             ),
                             TextButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Get.to(authors());
+                              },
                               child: Text(
                                 "See all",
                                 style: TextStyle(
