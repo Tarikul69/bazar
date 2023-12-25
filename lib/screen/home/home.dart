@@ -59,7 +59,7 @@ class _homeState extends State<home> {
           child: Column(
             children: [
               SizedBox(
-                height: 290,
+                height: 200,
                 width: MediaQuery.of(context).size.width,
                 child: Card(
                   color: const Color.fromARGB(255, 224, 222, 222),
@@ -117,11 +117,6 @@ class _homeState extends State<home> {
                           ],
                         ),
                       ),
-                      //#########################################################
-                      //Best Vendor
-
-                      //#########################################################
-                      //Author
                     ],
                   ),
                 ),
@@ -178,11 +173,58 @@ class _homeState extends State<home> {
                           ],
                         ),
                       ),
-                      //#########################################################
-                      //Best Vendor
-
-                      //#########################################################
-                      //Author
+                    ],
+                  ),
+                ),
+              ),
+              //#################################################################
+              //Author
+              SizedBox(
+                height: 210,
+                width: MediaQuery.of(context).size.width,
+                child: Card(
+                  elevation: 1,
+                  child: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Row(
+                          children: [
+                            Title(
+                              color: Colors.black,
+                              child: Text(
+                                "Author",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 20,
+                                ),
+                              ),
+                            ),
+                            TextButton(
+                              onPressed: () {},
+                              child: Text(
+                                "See all",
+                                style: TextStyle(
+                                  fontSize: 20,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: Row(
+                          children: [
+                            author(),
+                            author(),
+                            author(),
+                            author(),
+                            author(),
+                            author(),
+                          ],
+                        ),
+                      ),
                     ],
                   ),
                 ),
@@ -196,15 +238,31 @@ class _homeState extends State<home> {
 
   Widget abcd() {
     return SizedBox(
-      height: 140,
+      height: 120,
       width: 180,
       child: Card(
+        color: Colors.black,
         child: FittedBox(
           fit: BoxFit.contain,
           child: Image.network(
-            'https://storage.googleapis.com/cms-storage-bucket/70760bf1e88b184bb1bc.png',
+            'https://images.pexels.com/photos/36753/flower-purple-lical-blosso.jpg',
           ),
         ),
+      ),
+    );
+  }
+
+  Widget author() {
+    return Padding(
+      padding: const EdgeInsets.all(10),
+      child: Column(
+        children: [
+          CircleAvatar(
+            radius: 50,
+          ),
+          Text("data"),
+          Text("data"),
+        ],
       ),
     );
   }
