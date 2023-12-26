@@ -76,7 +76,8 @@ class vendor extends StatelessWidget {
               Expanded(
                   child: TabBarView(
                 children: [],
-              ))
+                ),
+              )
             ],
           ),
         ),

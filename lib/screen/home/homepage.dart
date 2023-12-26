@@ -1,4 +1,4 @@
-import 'package:bazar/screen/home/cart.dart';
+import 'package:bazar/screen/card%20&%20checkout/cart.dart';
 import 'package:bazar/screen/category/category.dart';
 import 'package:bazar/screen/home/home.dart';
 import 'package:bazar/screen/profile/profile.dart';
@@ -21,14 +21,15 @@ class homepage extends StatelessWidget {
           ],
         ),
         bottomNavigationBar: Container(
-          height: 70,
+          height: 60,
           width: MediaQuery.of(context).size.width,
           child: TabBar(
             indicatorWeight: .1,
             labelStyle: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
             unselectedLabelStyle:
-                TextStyle(fontSize: 14, fontWeight: FontWeight.normal),
+                TextStyle(fontSize: 12, fontWeight: FontWeight.normal),
             unselectedLabelColor: Colors.black,
+            labelColor: Colors.deepPurple,
             tabs: [
               Tab(
                 text: "Home",
@@ -39,19 +40,19 @@ class homepage extends StatelessWidget {
               Tab(
                 text: "Category",
                 icon: FaIcon(
-                  FontAwesomeIcons.house,
+                  FontAwesomeIcons.list,
                 ),
               ),
               Tab(
                 text: "Cart",
                 icon: FaIcon(
-                  FontAwesomeIcons.house,
+                  FontAwesomeIcons.cartPlus,
                 ),
               ),
               Tab(
                 text: "Profile",
                 icon: FaIcon(
-                  FontAwesomeIcons.house,
+                  FontAwesomeIcons.person,
                 ),
               ),
             ],
