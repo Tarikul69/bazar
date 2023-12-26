@@ -1,4 +1,6 @@
+import 'package:bazar/screen/category/search.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class category extends StatelessWidget {
   const category({Key? key}) : super(key: key);
@@ -10,7 +12,12 @@ class category extends StatelessWidget {
         appBar: AppBar(
           centerTitle: true,
           elevation: 0,
-          leading: Icon(Icons.search),
+          leading: IconButton(
+            onPressed: () {
+              Get.to(search());
+            },
+            icon: Icon(Icons.search),
+          ),
           title: Text(
             "Category",
             style: TextStyle(
