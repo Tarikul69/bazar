@@ -6,26 +6,11 @@ class profile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        elevation: 1,
         centerTitle: true,
-        title: Text(
-          "Profile",
-          style: TextStyle(
-            color: Colors.black,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-        backgroundColor: Colors.white,
+        elevation: 1,
+        title: Text("profile"),
       ),
-      body: Container(
-        child: Column(
-          children: [
-            Row(
-              children: [],
-            ),
-          ],
-        ),
-      ),
+      body: Container(),
     );
   }
 }

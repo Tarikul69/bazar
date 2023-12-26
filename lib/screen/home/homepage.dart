@@ -1,5 +1,5 @@
 import 'package:bazar/screen/home/cart.dart';
-import 'package:bazar/screen/home/category.dart';
+import 'package:bazar/screen/category/category.dart';
 import 'package:bazar/screen/home/home.dart';
 import 'package:bazar/screen/profile/profile.dart';
 import 'package:flutter/material.dart';
