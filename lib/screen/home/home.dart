@@ -1,5 +1,6 @@
 import 'package:bazar/screen/home/component/authors.dart';
 import 'package:bazar/screen/home/component/vendor.dart';
+import 'package:bazar/screen/notification/delivery.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
@@ -48,7 +49,9 @@ class _homeState extends State<home> {
         actions: [
           IconButton(
             color: Colors.black,
-            onPressed: () {},
+            onPressed: () {
+              Get.to(delivery());
+            },
             icon: Icon(Icons.notifications),
           )
         ],
