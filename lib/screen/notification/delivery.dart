@@ -1,4 +1,3 @@
-import 'package:bazar/screen/widget/card_notification.dart';
 import 'package:flutter/material.dart';
 
 class delivery extends StatelessWidget {
@@ -19,40 +18,16 @@ class delivery extends StatelessWidget {
         ),
       ),
       body: Container(
-        padding: EdgeInsets.all(20),
-        child: Column(
-          //crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Title(
-              color: Colors.black,
-              child: Text(
-                "Current",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 25,
-                ),
-              ),
-            ),
-            SizedBox(
-              height: 15,
-            ),
-            //card_notification(),
-            SizedBox(
-              height: 15,
-            ),
-            Title(
-              color: Colors.black,
-              child: Text(
-                "October 2023",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 25,
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
+          padding: EdgeInsets.all(20),
+          child: ListView.builder(
+            scrollDirection: Axis.vertical,
+            itemCount: 4,
+            itemBuilder: (BuildContext context, int index) {
+              return ListTile(
+                title: Text("data"),
+              );
+            },
+          )),
     );
   }
 }

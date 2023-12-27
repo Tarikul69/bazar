@@ -5,9 +5,12 @@ class card_notification extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.deepPurple,
       body: SizedBox(
         height: 20,
+        
         width: MediaQuery.of(context).size.width * .10,
+        child: Card(),
       ),
     );
   }
