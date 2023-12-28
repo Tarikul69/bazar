@@ -1,4 +1,9 @@
+import 'package:bazar/screen/profile/my_account.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/get_navigation.dart';
 
 class profile extends StatelessWidget {
   const profile({Key? key}) : super(key: key);
@@ -38,11 +43,111 @@ class profile extends StatelessWidget {
               // ),
             ),
           ),
+          SizedBox(
+            height: 10,
+          ),
+          Container(
+            child: profilebutton(
+              name: "My Account",
+              symble: CupertinoIcons.person,
+              myontap: () {
+                //Get.toNamed(RoutesName.usersmyorder);
+                Get.to(my_account());
+              },
+            ),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Container(
+            child: profilebutton(
+              name: "Address",
+              symble: CupertinoIcons.location,
+              myontap: () {
+                //Get.toNamed(RoutesName.usersmyorder);
+              },
+            ),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Container(
+            child: profilebutton(
+              name: "Offers & Promos",
+              symble: CupertinoIcons.bag,
+              myontap: () {
+                //Get.toNamed(RoutesName.usersmyorder);
+              },
+            ),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Container(
+            child: profilebutton(
+              name: "Your Favourit",
+              symble: CupertinoIcons.heart,
+              myontap: () {
+                //Get.toNamed(RoutesName.usersmyorder);
+              },
+            ),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Container(
+            child: profilebutton(
+              name: "Order History",
+              symble: CupertinoIcons.list_bullet,
+              myontap: () {
+                //Get.toNamed(RoutesName.usersmyorder);
+              },
+            ),
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          Container(
+            child: profilebutton(
+              name: "Help Center",
+              symble: CupertinoIcons.mail,
+              myontap: () {
+                //Get.toNamed(RoutesName.usersmyorder);
+              },
+            ),
+          ),
+          const SizedBox(
+            height: 10,
+          ),
         ],
       ),
     );
   }
 
-  
+  Widget profilebutton(
+      {required String name,
+      required IconData symble,
+      required VoidCallback myontap}) {
+    return InkWell(
+      onTap: myontap,
+      child: Container(
+        decoration: const BoxDecoration(boxShadow: []),
+        child: ListTile(
+          title: Text(
+            name.toString(),
+            style: const TextStyle(fontWeight: FontWeight.bold),
+          ),
+          //subtitle: Text("data"),
+          leading: Icon(
+            symble,
+            color: Colors.deepPurple,
+          ),
+          trailing: const FaIcon(
+            FontAwesomeIcons.angleRight,
+            color: Colors.grey,
+          ),
+        ),
+      ),
+    );
+  }
 }
-
