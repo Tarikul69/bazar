@@ -30,22 +30,65 @@ class profile extends StatelessWidget {
       body: Column(
         children: [
           SizedBox(
-            height: 120,
+            height: 150,
             width: MediaQuery.of(context).size.width,
-            child: Card(
-              color: const Color.fromARGB(255, 243, 241, 243),
-              // child: Row(
-              //   children: [
-              //     CircleAvatar(),
-              //     ListTile(
-              //       title: Text(
-              //         "Tarikul Imam",
-              //         style: TextStyle(fontWeight: FontWeight.bold),
-              //       ),
-              //       subtitle: Text("+8801710519031"),
-              //     ),
-              //   ],
-              // ),
+            child: Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: Card(
+                color: const Color.fromARGB(255, 243, 241, 243),
+                child: Row(
+                  children: [
+                    CircleAvatar(
+                      backgroundImage: NetworkImage(
+                          "https://images.pexels.com/photos/36753/flower-purple-lical-blosso.jpg"),
+                      radius: 50,
+                    ),
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(10, 0, 0, 0),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Title(
+                            color: Colors.black,
+                            child: Text("Tarikul Imam"),
+                          ),
+                          Text("+8801710519031"),
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(80, 0, 0, 0),
+                      child: TextButton(
+                        autofocus: false,
+                        style: ButtonStyle(),
+                        onPressed: () {},
+                        child: Text(
+                          "Logout",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 15,
+                            color: Colors.black,
+                          ),
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+                
+                // child: Row(
+                //   children: [
+                //     CircleAvatar(),
+                //     ListTile(
+                //       title: Text(
+                //         "Tarikul Imam",
+                //         style: TextStyle(fontWeight: FontWeight.bold),
+                //       ),
+                //       subtitle: Text("+8801710519031"),
+                //     ),
+                //   ],
+                // ),
+              ),
             ),
           ),
           SizedBox(
