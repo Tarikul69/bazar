@@ -8,6 +8,7 @@ class server extends StatelessWidget {
       appBar: AppBar(
         title: Text("Server"),
       ),
+      body: Container(),
     );
   }
 }
