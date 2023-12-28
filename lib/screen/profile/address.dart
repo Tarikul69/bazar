@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class my_account extends StatelessWidget {
-  const my_account({Key? key}) : super(key: key);
+class address extends StatelessWidget {
+  const address({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -9,13 +9,15 @@ class my_account extends StatelessWidget {
         elevation: 0,
         backgroundColor: Colors.white,
         foregroundColor: Colors.black,
-        title: Text(
-          "My Account",
+        title: const Text(
+          "Address",
           style: TextStyle(
             fontWeight: FontWeight.bold,
           ),
         ),
+        centerTitle: true,
       ),
+      body: Container(),
     );
   }
 }

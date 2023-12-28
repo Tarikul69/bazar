@@ -1,4 +1,9 @@
+import 'package:bazar/screen/profile/address.dart';
+import 'package:bazar/screen/profile/favourit.dart';
+import 'package:bazar/screen/profile/help_center.dart';
 import 'package:bazar/screen/profile/my_account.dart';
+import 'package:bazar/screen/profile/offers_promotions.dart';
+import 'package:bazar/screen/profile/order_history.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -64,7 +69,7 @@ class profile extends StatelessWidget {
               name: "Address",
               symble: CupertinoIcons.location,
               myontap: () {
-                //Get.toNamed(RoutesName.usersmyorder);
+                Get.to(address());
               },
             ),
           ),
@@ -76,7 +81,7 @@ class profile extends StatelessWidget {
               name: "Offers & Promos",
               symble: CupertinoIcons.bag,
               myontap: () {
-                //Get.toNamed(RoutesName.usersmyorder);
+                Get.to(offers_promotions());
               },
             ),
           ),
@@ -88,7 +93,7 @@ class profile extends StatelessWidget {
               name: "Your Favourit",
               symble: CupertinoIcons.heart,
               myontap: () {
-                //Get.toNamed(RoutesName.usersmyorder);
+                Get.to(favourit());
               },
             ),
           ),
@@ -100,7 +105,7 @@ class profile extends StatelessWidget {
               name: "Order History",
               symble: CupertinoIcons.list_bullet,
               myontap: () {
-                //Get.toNamed(RoutesName.usersmyorder);
+                Get.to(order_history());
               },
             ),
           ),
@@ -112,7 +117,7 @@ class profile extends StatelessWidget {
               name: "Help Center",
               symble: CupertinoIcons.mail,
               myontap: () {
-                //Get.toNamed(RoutesName.usersmyorder);
+                Get.to(help_center());
               },
             ),
           ),

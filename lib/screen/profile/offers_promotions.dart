@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class my_account extends StatelessWidget {
-  const my_account({Key? key}) : super(key: key);
+class offers_promotions extends StatelessWidget {
+  const offers_promotions({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -10,12 +10,14 @@ class my_account extends StatelessWidget {
         backgroundColor: Colors.white,
         foregroundColor: Colors.black,
         title: Text(
-          "My Account",
+          "Offers & Promotions",
           style: TextStyle(
             fontWeight: FontWeight.bold,
           ),
         ),
+        centerTitle: true,
       ),
+      body: Container(),
     );
   }
 }
