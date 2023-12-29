@@ -16,6 +16,30 @@ class my_account extends StatelessWidget {
           ),
         ),
       ),
+      body: Container(
+        padding: EdgeInsets.all(10),
+        child: Column(
+          children: [
+            Stack(
+              alignment: Alignment.topCenter,
+              children: [
+                Container(
+                  color: Color.fromARGB(255, 203, 185, 206),
+                ),
+                CircleAvatar(
+                  foregroundColor: Colors.grey,
+                  backgroundColor: Colors.grey,
+                  radius: 50,
+                ),
+                IconButton(
+                  onPressed: () {},
+                  icon: Icon(Icons.camera_alt_outlined),
+                )
+              ],
+            )
+          ],
+        ),
+      ),
     );
   }
 }
