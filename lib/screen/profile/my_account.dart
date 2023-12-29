@@ -17,7 +17,7 @@ class my_account extends StatelessWidget {
         ),
       ),
       body: Container(
-        padding: EdgeInsets.all(10),
+        padding: EdgeInsets.all(15),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -25,7 +25,7 @@ class my_account extends StatelessWidget {
               alignment: Alignment.topCenter,
               children: [
                 Container(
-                  color: Color.fromARGB(255, 154, 119, 160),
+                  color: Color.fromARGB(255, 73, 19, 83),
                 ),
                 CircleAvatar(
                   foregroundColor: Colors.grey,
@@ -76,6 +76,9 @@ class my_account extends StatelessWidget {
                 ),
               ),
             ),
+            SizedBox(
+              height: 10,
+            ),
             TextFormField(
               decoration: InputDecoration(
                   border: OutlineInputBorder(
@@ -89,6 +92,9 @@ class my_account extends StatelessWidget {
                 (value != null && value.contains('@'));
               },
             ),
+            SizedBox(
+              height: 10,
+            ),
             Title(
               color: Colors.black,
               child: Text(
@@ -98,15 +104,45 @@ class my_account extends StatelessWidget {
                 ),
               ),
             ),
+            SizedBox(
+              height: 10,
+            ),
             TextFormField(
               decoration: InputDecoration(
+                prefixIcon: Icon(Icons.phone),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.all(
                     Radius.circular(6),
                   ),
                 ),
                 hintText: 'Phone Number',
-                icon: Icon(Icons.phone),
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Title(
+              color: Colors.black,
+              child: Text(
+                "Password",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            TextFormField(
+              obscureText: true,
+              decoration: InputDecoration(
+                suffixIcon: Icon(Icons.remove_red_eye),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(6),
+                  ),
+                ),
+                hintText: 'Password',
               ),
             ),
           ],
