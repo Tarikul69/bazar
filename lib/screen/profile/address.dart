@@ -17,7 +17,12 @@ class address extends StatelessWidget {
         ),
         centerTitle: true,
       ),
-      body: Container(),
+      body: Container(
+        padding: EdgeInsets.all(15),
+        child: Column(
+          children: [],
+        ),
+      ),
     );
   }
 }
