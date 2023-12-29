@@ -145,6 +145,26 @@ class my_account extends StatelessWidget {
                 hintText: 'Password',
               ),
             ),
+            SizedBox(
+              height: 30,
+            ),
+            SizedBox(
+              height: 60,
+              width: MediaQuery.of(context).size.width,
+              child: ElevatedButton(
+                style: ButtonStyle(
+                    //shape: ,
+                    backgroundColor:
+                        MaterialStatePropertyAll(Colors.deepPurple)),
+                onPressed: () {},
+                child: Text(
+                  "Save Changes",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            )
           ],
         ),
       ),
