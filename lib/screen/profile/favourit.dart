@@ -5,13 +5,13 @@ class favourit extends StatelessWidget {
 
   Widget my_container() {
     return Padding(
-      padding: const EdgeInsets.all(20.0),
+      padding: const EdgeInsets.all(8.0),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           SizedBox(
             height: 50,
-            width: 50,
+            width: 70,
             child: Card(
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(15)),
