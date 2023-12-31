@@ -93,6 +93,7 @@ class profile extends StatelessWidget {
                                       height: 50,
                                       width: Get.width,
                                       child: ElevatedButton(
+                                      
                                         style: ButtonStyle(),
                                         onPressed: () {},
                                         child: Text(
@@ -103,7 +104,25 @@ class profile extends StatelessWidget {
                                           ),
                                         ),
                                       ),
-                                    )
+                                    ),
+                                    SizedBox(
+                                      height: 15,
+                                    ),
+                                    SizedBox(
+                                      height: 50,
+                                      width: Get.width,
+                                      child: ElevatedButton(
+                                        style: ButtonStyle(),
+                                        onPressed: () {},
+                                        child: Text(
+                                          "Cancel",
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 15,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
                                   ],
                                 ),
                               ),
