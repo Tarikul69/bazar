@@ -11,7 +11,7 @@ class address extends StatelessWidget {
         backgroundColor: Colors.white,
         foregroundColor: Colors.black,
         title: const Text(
-          "Address",
+          "Address", 
           style: TextStyle(
             fontWeight: FontWeight.bold,
           ),

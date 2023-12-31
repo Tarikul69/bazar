@@ -64,7 +64,51 @@ class profile extends StatelessWidget {
                         child: TextButton(
                           autofocus: false,
                           style: ButtonStyle(),
-                          onPressed: () {},
+                          onPressed: () {
+                            Get.bottomSheet(Material(
+                              borderRadius: BorderRadius.circular(25),
+                              child: Padding(
+                                padding: const EdgeInsets.all(15.0),
+                                child: Column(
+                                  children: [
+                                    Container(
+                                      margin: EdgeInsets.only(top: 5),
+                                      height: 3,
+                                      width: Get.width / 5,
+                                      decoration: BoxDecoration(
+                                        color: Colors.black,
+                                        borderRadius:
+                                            BorderRadius.circular(100),
+                                      ),
+                                    ),
+                                    ListTile(
+                                      title: Text("Logout"),
+                                      subtitle: Text(
+                                          "Learn lpsum is simply dummy text of the printing and typesetting industry."),
+                                    ),
+                                    SizedBox(
+                                      height: 10,
+                                    ),
+                                    SizedBox(
+                                      height: 50,
+                                      width: Get.width,
+                                      child: ElevatedButton(
+                                        style: ButtonStyle(),
+                                        onPressed: () {},
+                                        child: Text(
+                                          "Logout",
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 15,
+                                          ),
+                                        ),
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ),
+                            ));
+                          },
                           child: Text(
                             "Logout",
                             style: TextStyle(
@@ -74,11 +118,11 @@ class profile extends StatelessWidget {
                             ),
                           ),
                         ),
-                      )
+                      ),
                     ],
                   ),
                 ),
-                
+
                 // child: Row(
                 //   children: [
                 //     CircleAvatar(),
