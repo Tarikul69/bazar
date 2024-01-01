@@ -10,32 +10,125 @@ class signin extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        leading: BackButton(
-          style: ButtonStyle(),
-          onPressed: () {
-            Get.to(profile());
-          },
-        ),
+        backgroundColor: Colors.white,
+        // leading: BackButton(
+        //   style: ButtonStyle(),
+        //   onPressed: () {
+        //     Get.to(profile());
+        //   },
+        // ),
         actions: [
           IconButton(
             onPressed: () {
               Get.to(profile());
             },
             icon: Icon(Icons.back_hand),
-          )
+          ),
         ],
       ),
       body: Container(
         alignment: Alignment.topLeft,
         padding: EdgeInsets.all(15),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-             
             ListTile(
-              title: Text("Welcome Back"),
+              title: Padding(
+                padding: const EdgeInsets.fromLTRB(0, 8, 0, 8),
+                child: Text(
+                  "Welcome Back",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
               subtitle: Text("Sign to your account"),
             ),
+            SizedBox(
+              height: 15,
+            ),
+            Title(
+              color: Colors.black,
+              child: Text(
+                "Email",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 15,
+            ),
+            TextFormField(
+              decoration: InputDecoration(
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(6),
+                    ),
+                  ),
+                  hintText: 'Your Email'),
+              validator: (String? value) {
+                return;
+                (value != null && value.contains('@'));
+              },
+            ),
+            SizedBox(
+              height: 15,
+            ),
+            Title(
+              color: Colors.black,
+              child: Text(
+                "Password",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            TextFormField(
+              obscureText: true,
+              decoration: InputDecoration(
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(6),
+                    ),
+                  ),
+                  hintText: 'Your Password'),
+            ),
+            SizedBox(
+              height: 15,
+            ),
+            InkWell(
+              onTap: () {},
+              child: Text(
+                "Forgot Password?",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.deepPurple,
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            ElevatedButton(
+              onPressed: () {},
+              style: ElevatedButton.styleFrom(
+                  fixedSize: Size(Get.width, 60),
+                  backgroundColor: Colors.deepPurple,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  padding: EdgeInsets.all(16)),
+              child: Text(
+                "Login",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            )
           ],
         ),
       ),

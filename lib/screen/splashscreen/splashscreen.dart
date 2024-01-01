@@ -25,7 +25,7 @@ class _splashscreenState extends State<splashscreen> {
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(
-        builder: (context) => homepage(),
+        builder: (context) => signin(),
       ),
     );
   }
