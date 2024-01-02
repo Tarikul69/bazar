@@ -1,3 +1,5 @@
+import 'package:bazar/screen/sign%20in%20&%20sign%20up/success_verification.dart';
+import 'package:bazar/screen/sign%20in%20&%20sign%20up/verification.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -112,7 +114,9 @@ class signup extends StatelessWidget {
                   ),
                   backgroundColor: Colors.deepPurple,
                   fixedSize: Size(Get.width, 60)),
-              onPressed: () {},
+              onPressed: () {
+                Get.to(success_verification());
+              },
               child: Text(
                 "Register",
                 style: TextStyle(

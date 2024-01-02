@@ -1,5 +1,6 @@
 import 'package:bazar/screen/profile/profile.dart';
 import 'package:bazar/screen/sign%20in%20&%20sign%20up/signup.dart';
+import 'package:bazar/screen/sign%20in%20&%20sign%20up/verification.dart';
 import 'package:bazar/screen/splashscreen/splashscreen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -101,7 +102,9 @@ class signin extends StatelessWidget {
               height: 15,
             ),
             InkWell(
-              onTap: () {},
+              onTap: () {
+                Get.to(verification());
+              },
               child: Text(
                 "Forgot Password?",
                 style: TextStyle(
