@@ -1,4 +1,5 @@
 import 'package:bazar/screen/profile/profile.dart';
+import 'package:bazar/screen/sign%20in%20&%20sign%20up/signup.dart';
 import 'package:bazar/screen/splashscreen/splashscreen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -28,18 +29,17 @@ class signin extends StatelessWidget {
       ),
       body: Container(
         alignment: Alignment.topLeft,
-        padding: EdgeInsets.all(15),
+        padding: EdgeInsets.all(25),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             ListTile(
-              title: Padding(
-                padding: const EdgeInsets.fromLTRB(0, 8, 0, 8),
-                child: Text(
-                  "Welcome Back",
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                  ),
+              title: Text(
+                "Welcome Back",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20,
                 ),
               ),
               subtitle: Text("Sign to your account"),
@@ -146,12 +146,17 @@ class signin extends StatelessWidget {
                       color: Colors.grey,
                     ),
                   ),
-                  Text(
-                    "Sign Up",
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20,
-                      color: Colors.deepPurple,
+                  InkWell(
+                    onTap: () {
+                      Get.to(signup());
+                    },
+                    child: Text(
+                      "Sign Up",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20,
+                        color: Colors.deepPurple,
+                      ),
                     ),
                   )
                 ],
