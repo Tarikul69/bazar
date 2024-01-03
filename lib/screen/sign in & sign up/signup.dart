@@ -113,7 +113,8 @@ class signup extends StatelessWidget {
                     borderRadius: BorderRadius.circular(20),
                   ),
                   backgroundColor: Colors.deepPurple,
-                  fixedSize: Size(Get.width, 60)),
+                fixedSize: Size(Get.width, 60),
+              ),
               onPressed: () {
                 Get.to(success_verification());
               },
