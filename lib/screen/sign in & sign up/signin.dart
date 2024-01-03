@@ -1,3 +1,4 @@
+import 'package:bazar/screen/forget%20password/forgot_password.dart';
 import 'package:bazar/screen/profile/profile.dart';
 import 'package:bazar/screen/sign%20in%20&%20sign%20up/signup.dart';
 import 'package:bazar/screen/sign%20in%20&%20sign%20up/verification.dart';
@@ -103,7 +104,7 @@ class signin extends StatelessWidget {
             ),
             InkWell(
               onTap: () {
-                Get.to(verification());
+                Get.to(forgot_password());
               },
               child: Text(
                 "Forgot Password?",
