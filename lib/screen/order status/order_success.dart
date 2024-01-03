@@ -20,7 +20,7 @@ class order_success extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(
-                width: Get.width,
+                width: MediaQuery.of(context).size.width,
                 height: Get.height * 0.15,
                 child: Card(
                   color: Color.fromARGB(255, 188, 166, 188),
@@ -94,8 +94,9 @@ class order_success extends StatelessWidget {
               ),
               SizedBox(
                 width: Get.width,
-                height: Get.height,
+                height: Get.height * 0.5,
                 child: Card(
+                  elevation: 1,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15),
                   ),
@@ -104,23 +105,86 @@ class order_success extends StatelessWidget {
                     child: Column(
                       children: [
                         Divider(),
-                        Row(
-                          children: [
-                            Text("Subtotal"),
-                            Text('87.9'),
-                          ],
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Subtotal",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              Text(
+                                '87.9',
+                                textAlign: TextAlign.right,
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                         Divider(),
                         Padding(
                           padding: const EdgeInsets.all(8.0),
-                          child: Text("data"),
+                          child: Row(
+                            children: [
+                              Text("Shipping"),
+                              Text("2"),
+                            ],
+                          ),
                         ),
                         Divider(),
+                        Padding(
+                          padding: EdgeInsets.all(8),
+                          child: Row(
+                            children: [
+                              Text(
+                                "Total Payment",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.all(8),
+                          child: Row(
+                            children: [
+                              Text("data"),
+                              Text("data"),
+                            ],
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.all(8),
+                          child: Row(
+                            children: [
+                              Text("data"),
+                              Text("data"),
+                            ],
+                          ),
+                        ),
                       ],
                     ),
                   ),
                 ),
-              )
+              ),
+              ElevatedButton(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Color.fromARGB(255, 133, 112, 137),
+                    fixedSize: Size(Get.width, 60),
+                  ),
+                  child: Text(
+                    "Order Status",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ))
             ],
           ),
         ),
