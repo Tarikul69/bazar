@@ -1,3 +1,4 @@
+import 'package:bazar/screen/order%20status/review.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/get_navigation.dart';
@@ -174,7 +175,9 @@ class order_success extends StatelessWidget {
                 ),
               ),
               ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Get.to(review());
+                  },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Color.fromARGB(255, 133, 112, 137),
                     fixedSize: Size(Get.width, 60),
