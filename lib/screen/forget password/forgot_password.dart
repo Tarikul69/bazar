@@ -29,6 +29,9 @@ class _forgot_passwordState extends State<forgot_password> {
         elevation: 0,
         backgroundColor: Colors.white,
         foregroundColor: Colors.black,
+        title: Text(
+          abcd[0]['title'],
+        ),
       ),
       body: Container(
         padding: EdgeInsets.all(15),
@@ -47,18 +50,11 @@ class _forgot_passwordState extends State<forgot_password> {
                 style: TextStyle(fontSize: 15),
               ),
             ),
-            GridView.count(
-              crossAxisCount: 2,
-              children: List.generate(
-                2,
-                (index) {
-                  return card1();
-                },
-              ),
-            ),
+             
             ElevatedButton(
                 onPressed: () {},
                 style: ElevatedButton.styleFrom(
+                  shape: ContinuousRectangleBorder(),
                   backgroundColor: Colors.deepPurple,
                   fixedSize: Size(Get.width, 60),
                 ),

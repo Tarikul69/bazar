@@ -161,6 +161,7 @@ class my_account extends StatelessWidget {
                   "Save Changes",
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
+                    color: Colors.white,
                   ),
                 ),
               ),
