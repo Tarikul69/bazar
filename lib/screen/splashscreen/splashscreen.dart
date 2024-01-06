@@ -1,3 +1,4 @@
+import 'package:bazar/screen/forget%20password/forgot_password.dart';
 import 'package:bazar/screen/home/homepage.dart';
 import 'package:bazar/screen/onboarding/oneboarding1.dart';
 import 'package:bazar/screen/order%20status/order_success.dart';
@@ -26,7 +27,7 @@ class _splashscreenState extends State<splashscreen> {
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(
-        builder: (context) => order_success(),
+        builder: (context) => forgot_password(),
       ),
     );
   }

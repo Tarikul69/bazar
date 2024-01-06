@@ -2,8 +2,26 @@ import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 
-class forgot_password extends StatelessWidget {
+class forgot_password extends StatefulWidget {
   const forgot_password({Key? key}) : super(key: key);
+
+  @override
+  State<forgot_password> createState() => _forgot_passwordState();
+}
+
+class _forgot_passwordState extends State<forgot_password> {
+  final List<Map<String, dynamic>> abcd = [
+    {
+      "title": "Email",
+      "subtitle": "Send to your email",
+      "icon": Icons.email,
+    },
+    {
+      "title": "Email",
+      "subtitle": "Send to your email",
+      "icon": Icons.email,
+    },
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
