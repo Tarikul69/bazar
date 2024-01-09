@@ -50,7 +50,12 @@ class _forgot_passwordState extends State<forgot_password> {
                 style: TextStyle(fontSize: 15),
               ),
             ),
-             
+            SizedBox(
+              height: 10,
+            ),
+            ListView(
+              children: [for (var i = 0; i == 2; i++) Text(abcd[i]['title'])],
+            ),
             ElevatedButton(
                 onPressed: () {},
                 style: ElevatedButton.styleFrom(
@@ -61,7 +66,8 @@ class _forgot_passwordState extends State<forgot_password> {
                 child: Text(
                   "Continue",
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
-                ))
+              ),
+            )
           ],
         ),
       ),
