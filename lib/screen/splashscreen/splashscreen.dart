@@ -27,7 +27,7 @@ class _splashscreenState extends State<splashscreen> {
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(
-        builder: (context) => forgot_password(),
+        builder: (context) => oneboarding1(),
       ),
     );
   }
